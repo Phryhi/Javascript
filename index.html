@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="tudo">
+        <h1>Currículo</h1>
+        <form>
+            <label for="name">Nome:</label>
+            <input name="name" id="nome"><br/>
+            <label for="idade">Idade:</label>
+            <input name="idade" id="idade"><br/>
+            <label for="vaga">Vaga:</label>
+            <input name="vaga" id="vaga"><br/><br/>
+            <button id="envio">Enviar</button>
+        </form>
+        <br/>
+        <br/>
+        <div>
+            <h2 id="h2Curriculo"></h2>
+            <h2 id="h2Status">Esse é o seu status: </h2>
+        </div>
+    </div>
+    <script>
+        let nome;
+        let idade;
+        let vaga;
+
+        document.getElementById("envio").onclick = function(event){
+            event.preventDefault()
+            meuNome = document.getElementById("nome").value;
+            minhaIdade = document.getElementById("idade").value;
+            minhaVaga = document.getElementById("vaga").value;
+            document.getElementById("h2Curriculo").textContent = `Candidato(a): ${meuNome}, tem ${minhaIdade} anos e busca vaga como ${minhaVaga}`;
+            if (minhaIdade >= 18 && minhaVaga === "junior" || "júnior"){
+                document.getElementById("h2Status").textContent = `Esse é o seu status: aprovado!`;
+            } else if(minhaIdade >= 16 && minhaIdade < 18 && minhaVaga === "aprendiz"){
+                document.getElementById("h2Status").textContent = `Esse é o seu status: aprovado!`;
+            }else{
+                document.getElementById("h2Status").textContent = `Esse é o seu status: negado.`;
+            }
+        }
+    </script>
+</body>
+</html>

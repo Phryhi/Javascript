@@ -1,0 +1,34 @@
+body{
+    height:900px;
+    width: 850px;
+    margin: 0;
+    color: #F4C2C2;
+}
+.tudo{
+    margin-left:100%;
+    background-color: #555D50;
+    border-radius: 10%;
+    display:flexbox;
+    align-items: center;
+    justify-content: center;
+    height:60%;
+    width:70%;
+    margin-left:50%;
+    text-align: center;
+}
+.tudo h1{
+    padding-top:15%;
+    font-size: 40px;
+}
+.tudo label{
+    font-size: 20px;
+}
+.tudo #nome{
+    margin-left:7%;
+}
+.tudo #idade{
+    margin-left:8%;
+}
+.tudo #vaga{
+    margin-left: 9%;
+}
